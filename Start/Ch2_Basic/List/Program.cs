@@ -63,10 +63,13 @@ namespace ListExample
 
 
             // TODO: The FindAll function can find multiple items
-            List<string> itemList
+            List<string> itemList = strList.FindAll(x => x.StartsWith("L"));
+            PrintList(itemList);
 
 
             // TODO: Use TrueForAll to see if a given condition is true for all elements
+            bool result = strList.TrueForAll(x => x.Length > 10);
+            Console.WriteLine($"Result: {result}");
 
         }
 
